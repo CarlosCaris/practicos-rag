@@ -7,8 +7,9 @@ from qdrant_client.models import PointStruct, Distance, VectorParams
 from src.loaders.load_documents import fn_load_pdf
 from src.chunking.simple import fn_simple_chunking 
 from src.chunking.semantic import fn_semantic_chunk
-from src.cleaning.clean_documents import fn_clean_text
 from src.embedding.dense_embeddings import fn_dense_embeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 
 def preprocess_documents(input_folder, collection_name="my_documents"):
     """
@@ -35,14 +36,9 @@ def preprocess_documents(input_folder, collection_name="my_documents"):
         if not documents:
             raise ValueError("No se encontraron documentos para procesar.")
 
-        # CHUNKING
+        # CLEANING AND CHUNKING
         print("Dividiendo documentos en fragmentos...")
         chunks = fn_semantic_chunk(documents, nlp_model=spacy.load("es_core_news_sm"), initial_chunk_size=512, min_length=100)
-
-        # CLEANING
-        print("Limpiando el contenido de los fragmentos...")
-        for chunk in chunks:
-            chunk.page_content = fn_clean_text(chunk.page_content)
 
         # EMBEDDINGS
         embeddings = fn_dense_embeddings(chunks)
