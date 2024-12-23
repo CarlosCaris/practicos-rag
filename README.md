@@ -13,7 +13,7 @@ _Para poder trabajar con el repositorio y sus dependencias, necesitas contar con
 El paso inicial es clonar el repositorio en su entorno local. Para esto ejecute el siguiente comando:
 
 ```
-git clone https://github.com/fernando-echiburug/practicos-rag.git
+git clone https://github.com/fernando-echiburug/rag-chile-food-regulations.git
 ```
 
 Una vez clonado, entre a la carpeta del repositorio (por defecto se llamará rag-chile-food-regulations).
@@ -54,7 +54,16 @@ python main_preprocess.py
 
 Importante: Esta ejecución se realiza cada vez que se ha iniciado el proyecto desde cero, puesto que la base de datos se almacena en la memoria RAM del equipo desde el cual se ejecuta.
 
-### 5. Despliegue de aplicación con Streamlit
+
+### 5. Carga de su API KEY
+En el archivo .env, en la raíz del código, hallará lo siguiente:
+```
+OPENAI_API_KEY=REEMPLACE_POR_SU_API_KEY
+```
+
+Cambie el texto REEMPLACE_POR_SU_API_KEY por su API KEY de OPEN AI.
+
+### 6. Despliegue de aplicación con Streamlit
 
 Finalmente, para desplegar y comenzar a usar la aplicación, debe ejecutar el siguiente comando:
 ```
