@@ -56,7 +56,7 @@ Importante: Esta ejecución se realiza cada vez que se ha iniciado el proyecto d
 
 
 ### 5. Carga de su API KEY
-En el archivo .env, en la raíz del código, hallará lo siguiente:
+Cree un archivo .env, en la raíz del proyecto, y pegue lo siguiente:
 ```
 OPENAI_API_KEY=REEMPLACE_POR_SU_API_KEY
 ```
