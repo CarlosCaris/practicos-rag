@@ -56,12 +56,12 @@ Importante: Esta ejecución se realiza cada vez que se ha iniciado el proyecto d
 
 
 ### 5. Carga de su API KEY
-Cree un archivo .env, en la raíz del proyecto, y pegue lo siguiente:
+Cree un archivo .env, en la raíz del proyecto, y pegue lo siguiente en la primera línea:
 ```
 OPENAI_API_KEY=REEMPLACE_POR_SU_API_KEY
 ```
 
-Cambie el texto REEMPLACE_POR_SU_API_KEY por su API KEY de OPEN AI.
+Luego, cambie el texto REEMPLACE_POR_SU_API_KEY por su API KEY de OPEN AI.
 
 ### 6. Despliegue de aplicación con Streamlit
 
