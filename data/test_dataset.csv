@@ -1,0 +1,4 @@
+query,grading_notes
+What is Ragas 0.3?,- Ragas 0.3 is a library for evaluating LLM applications.
+How to install Ragas?,- install from source  - install from pip using ragas[examples]
+What are the main features of Ragas?,organised around - experiments - datasets - metrics.
